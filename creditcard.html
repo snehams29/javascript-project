@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CC Verification</title>
+    
+  </head>
+  <body>
+    <div class="mb-3">
+      <label for="ccNumber" class="form-label">Credit Card Number</label>
+      <input
+        class="form-control"
+        id="ccNumber"
+        placeholder="0000000000000000"
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="button"
+        class="btn btn-primary"
+        value="Check"
+        onClick="checkCC()"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="ccValidator" class="form-label">Is it valid?</label>
+      <textarea
+        disabled="true"
+        class="form-control"
+        id="ccValidator"
+        rows="3"
+        style="font-size: 25px"
+      ></textarea>
+    </div>
+    
+    
+
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
