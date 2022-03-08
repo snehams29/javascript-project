@@ -1,0 +1,38 @@
+
+ <html>
+ <body>
+
+ <form>
+  <input type="tel" id="myInput" oninput="myFunction()" placeholder="(###) ### - ####" required pattern="\([0-9]{3}\) [0-9]{3} - [0-9]{4}">
+  <!-- oninput is trigued when the input changes, check https://www.w3schools.com/jsref/event_oninput.asp -->
+  <!-- Used regex to check the input value before submit from user -->
+  <input type="submit">
+</form>
+  
+  
+  <script>
+  document.getElementById('phoneNumber').addEventListener('keyup', function(evt) {
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if(charCode == 8 || charCode == 46) return true;
+    else this.value = formatPhone(this.value);
+}, false);
+
+function formatPhone(str) {
+    if(str.length == 0) return str;
+    if(delKey) return str;
+    var phone = '(';
+    str = str.replace(/\D/g, '').substring(0,10);
+    if(str.length < 3) {
+        phone += str;
+    } else if(str.length < 6) {
+        phone += str.substring(0, 3) + ') ';
+        if(str.length > 3) phone += str.substring(3, str.length);
+    } else {
+        phone += str.substring(0, 3) + ') ' + str.substring(3, 6) + '-' + str.substring(6, 10);
+    }
+                
+    return phone;
+}
+</script>
+</body>
+</html>
