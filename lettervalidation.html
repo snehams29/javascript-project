@@ -1,0 +1,25 @@
+<html>
+<body>
+<script type='text/javascript'>
+function letterValidation()
+{
+var letterValue = /^[a-zA-Z]+$/;
+if(document.getElementById('txtletter').value.match(letterValue))
+{
+alert("Yes you enter letters only.");
+return true;
+}
+else
+{
+alert('Enter only Letters like A-Z or a-z');
+txtletter.focus();
+return false;
+}
+}
+</script>
+<form>
+Please Letters Only: <input type='text' id='txtletter'/>
+<input type='button' id="btnSubmit" onclick="letterValidation()" value='Submit' />
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<script type='text/javascript'>
+function textBoxValidation()
+{
+if(document.getElementById('txtBox').value.trim()== "")
+{
+alert('Textbox should not be blank');
+txtBox.focus();
+return false;
+}
+alert("Your name submitted sucessfully")
+return true;
+}
+</script>
+<form>
+Name:<input type='text' id='txtBox'/> <input type='button' onclick="textBoxValidation()"id="btnSubmit" value='Submit' />
+</form>
+</body>
+</html>
