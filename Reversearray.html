@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Reverse Array</p>
+<button onclick="reverseArrayValue()" id="btnClick">Click</button>
+<p id="pId"></p>
+<script>
+var season = ["Summer", "Winter", "Monsoon","Spring"];
+document.getElementById("pId").innerHTML = season;
+function reverseArrayValue() {
+season.reverse();
+document.getElementById("pId").innerHTML = season;
+}
+</script>
+</body>
+</html>

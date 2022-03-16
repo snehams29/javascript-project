@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myBigContainer {
+width: 600px;
+height: 500px;
+position: relative;
+background: pink;
+}
+#mySmallContainer {
+width: 100px;
+height: 50px;
+position: absolute;
+background-color: black;
+}
+</style>
+<body>
+<p>
+<button onclick=" javaScriptAniminationForMove()">Try this</button>
+</p>
+<div id ="myBigContainer">
+<div id ="mySmallContainer"></div>
+</div>
+<script>
+function javaScriptAniminationForMove() {
+var element = document.getElementById("mySmallContainer");
+var p = 0;
+var idValue = setInterval(frame, 30);
+function frame() {
+if (p == 500) {
+clearInterval(idValue);
+}
+else
+{
+p++;
+element.style.top = p+ 'px';
+element.style.left = p + 'px';
+}
+}
+}
+</script>
+</body>
+</html>
