@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>When we click on Play button the video will play and when click on stop button the video will stop</p>
+<button onclick="playVideo()" id="btnPlay()" type="button">Play The Video</button>
+<button onclick="stopVideo()"id="btnStop" type="button">Stop The Video</button><br>
+<video id="waterFallVid" width="320" height="250">
+<source src="https://onlysharepoint2013.sharepoint.com/sites/Raju/tsinfo/SiteAssets/WaterFall.mov" type="video/mp4">
+</video>
+<script>
+var video = document.getElementById("waterFallVid");
+function playVideo()
+{
+video.play();
+}
+function stopVideo()
+{
+video.pause();
+}
+</script>
+</body>
+</html>

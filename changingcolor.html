@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+
+<style>
+#fullScreenId {
+position: relative;
+height: 100%;
+width: 100%;
+}
+</style>
+<body>
+<div id="fullScreenId"></div>
+<script>
+var div = document.getElementById("fullScreenId");
+function getRandomColorInEach5Sec() {
+var letters = '0123456789ABCDEF';
+var randomColor = '#';
+for (var i = 0; i < 6; i++ ) {
+randomColor += letters[Math.floor(Math.random() * 16)];
+}
+return randomColor;
+}
+function chnageTheFullScreenColour(){
+div.style.backgroundColor= getRandomColorInEach5Sec();
+}
+setInterval(chnageTheFullScreenColour,1000);
+</script>
+</body>
+</head>
+</html>
