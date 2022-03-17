@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+Checkbox: <input type="checkbox" id="chkBox">
+<p>JavaScript check box validation example</p>
+<button onclick="showCheckBoxAlert()" id="btnClick">Click</button>
+<script>
+function showCheckBoxAlert() {
+var x = document.getElementById("chkBox");
+if(!x.checked)
+{
+alert('Check box is unchecked');
+return false;
+}
+else
+{
+alert('Check box is checked');
+return false;
+}
+}
+</script>
+</body>
+</html>

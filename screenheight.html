@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>When clicking on button it is showing the Screen height</p>
+<button onclick="showScreenHeight()" id="btnClick">Click</button>
+<p id="pId"></p>
+<script>
+function showScreenHeight() {
+var totalHeight = "Total Height: " + screen.height + "px";
+document.getElementById("pId").innerHTML =totalHeight;
+}
+</script>
+</body>
+</html>
