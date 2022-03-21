@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+.name{
+float:center;
+margin:100px;
+border:0.5px solid black;
+}
+.tooltip{
+position:fixed;
+margin:5px;
+width:200px;
+height:50px;
+border:1px solid black;
+display:none;
+}
+</style>
+</head>
+<body>
+<div class = "name" onmouseover="show(tooltipFirstName)" onmouseout="hide(tooltipFirstName)">
+FirstName:
+<div class = "tooltip" id= "tooltipFirstName">
+Give a Valid Name
+</div>
+</div>
+<div class = "name" onmouseover="show(tooltipQualification)" onmouseout="hide(tooltipQualification)">
+Qualification:
+<div class = "tooltip" id= "tooltipQualification">
+Enter your Qualification
+</div>
+</div>
+<div class = "name" onmouseover="show(tooltipAdress)" onmouseout="hide(tooltipAdress)">
+Permanenet Adress:
+<div class = "tooltip" id= "tooltipAdress">
+Give Your proper Permanenet address
+</div>
+</div>
+<script>
+function show (element) {
+element.style.display="block";
+}
+function hide (element) {
+element.style.display="";
+}
+</script>
+</body>
